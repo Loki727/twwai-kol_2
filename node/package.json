@@ -25,8 +25,11 @@
     "mongoose-unique-validator": "3.0.0",
     "sha1": "1.1.1",
     "socket.io": "2.0.4",
-    "vision": "4.1.0"
+    "vision": "4.1.0",
+    "react-router-dom": "^6.6.2",
+    "bootstrap": "5.2.3",
+    "chart.js": "4.2.0"
   },
-  "author": "Darek",
+  "author": "Maksymilian Oleksy",
   "license": "ISC"
 }

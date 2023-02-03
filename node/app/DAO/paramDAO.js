@@ -9,15 +9,21 @@ const paramSchema = new mongoose.Schema({
     pressure: {type: String},
     date: {type: String}
 }, {
-    collection: 'paramsXY'
+    collection: 'paramsMO'
 });
 paramSchema.plugin(uniqueValidator);
 
-const ParamModel = mongoose.model('paramsXY', paramSchema);
+const ParamModel = mongoose.model('paramsMO', paramSchema);
 
 async function query() {
-    // pobierz wszystkie
-}
+    const result = await ParamModel.find({});
+    {
+        if (result) {
+            return mongoConverter(result);
+        }
+    }
+ }
+ 
 
     // add
 

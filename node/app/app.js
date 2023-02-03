@@ -5,6 +5,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import morgan from 'morgan';
 import routes from './REST/routes';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const app = express();
 app.use(express.static(__dirname + '/public'));
@@ -37,9 +38,18 @@ process.on('SIGINT', () => {
 
 routes(app);
 
-app.get('/*', function (req, res) {
+app.get('/', function (req, res) {
   res.sendFile(__dirname + '/public/index.html');
 });
+
+app.get('/dash', function (req, res) {
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
+);
+  });
 
 app.listen(config.port, function () {
   console.info(`Server is running at ${config.port}`)

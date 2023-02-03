@@ -12,3 +12,5 @@ Odczyt = (temperatura, ciśnienie, wilgotność - powietrza, aktualna data - for
 - Wyświetlanie pomiarów pobranych z serwera
 
 3. Dodanie nowych odczytów za pomocą POSTMAN
+
+# Maksymilian Oleksy
